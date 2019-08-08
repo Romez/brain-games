@@ -1,4 +1,3 @@
-export const greetUser = (userName) => {
-  return `Hello, ${userName}`;
-}
+const greetUser = userName => `Hello, ${userName}`;
 
+export default greetUser;
