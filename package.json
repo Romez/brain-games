@@ -1,6 +1,6 @@
 {
   "name": "@romezzz/brain-games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "brain games",
   "main": "index.js",
   "bin": {
@@ -28,6 +28,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
+    "@babel/preset-env": "^7.5.5",
+    "readline-sync": "^1.4.10"
   }
 }
