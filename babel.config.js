@@ -1,7 +1,10 @@
 const presets = [
-  [
-    '@babel/preset-env',
-    'airbnb',
+  ['@babel/preset-env',
+    {
+      targets: {
+        node: 'current',
+      },
+    },
   ],
 ];
 
