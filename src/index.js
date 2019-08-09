@@ -1,3 +1,3 @@
-const greetUser = userName => `Hello, ${userName}`;
+export const greetUser = userName => `Hello, ${userName}`;
 
-export default greetUser;
+export const isEven = number => number % 2 === 0;
