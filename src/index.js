@@ -2,12 +2,14 @@ import readlineSync from 'readline-sync';
 import chalk from 'chalk';
 import { play as evenPlay, title as evenTitle } from './games/even';
 import { play as calcPlay, title as calcTitle } from './games/calc';
+import { play as gcdPlay, title as gcdTitle } from './games/gcd';
 
 const { green } = chalk;
 
 const games = {
   even: { title: evenTitle, play: evenPlay },
   calc: { title: calcTitle, play: calcPlay },
+  gcd: { title: gcdTitle, play: gcdPlay },
 };
 
 export const greetUser = userName => `Hello, ${userName}`;
