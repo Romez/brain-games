@@ -8,4 +8,4 @@ Even game
 [![asciicast](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o.svg)](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o)
 
 Calc game
-
+[![asciicast](https://asciinema.org/a/261760.svg)](https://asciinema.org/a/261760)
