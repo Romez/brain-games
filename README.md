@@ -2,4 +2,5 @@
 
 [![Build Status](https://travis-ci.com/Romez/backend-project-lvl1.svg?branch=master)](https://travis-ci.com/Romez/backend-project-lvl1)
 
+Even game
 [![asciicast](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o.svg)](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o)
