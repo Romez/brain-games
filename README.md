@@ -9,3 +9,6 @@ Even game
 
 Calc game
 [![asciicast](https://asciinema.org/a/261760.svg)](https://asciinema.org/a/261760)
+
+Gcd game
+[![asciicast](https://asciinema.org/a/261765.svg)](https://asciinema.org/a/261765)
