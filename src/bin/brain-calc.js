@@ -2,4 +2,4 @@
 
 import startGame from '..';
 
-startGame('even');
+startGame('calc');
