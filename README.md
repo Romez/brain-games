@@ -9,14 +9,17 @@
 
 ### Games
 
-Even game ```brain-even```
+Even game ```$ brain-even```
 [![asciicast](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o.svg)](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o)
 
-Calc game ```brain-calc```
+Calc game ```$ brain-calc```
 [![asciicast](https://asciinema.org/a/261760.svg)](https://asciinema.org/a/261760)
 
-Gcd game ```brain-gcd```
+Gcd game ```$ brain-gcd```
 [![asciicast](https://asciinema.org/a/261765.svg)](https://asciinema.org/a/261765)
 
-Progression game ```brain-progression```
+Progression game ```$ brain-progression```
 [![asciicast](https://asciinema.org/a/261797.svg)](https://asciinema.org/a/261797)
+
+Prime game ```$ brain-prime```
+[![asciicast](https://asciinema.org/a/261809.svg)](https://asciinema.org/a/261809)
