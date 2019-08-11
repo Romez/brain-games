@@ -4,11 +4,19 @@
 
 [![Build Status](https://travis-ci.com/Romez/backend-project-lvl1.svg?branch=master)](https://travis-ci.com/Romez/backend-project-lvl1)
 
-Even game
+### Instalation
+```npm i -g @romezzz/brain-games```
+
+### Games
+
+Even game ```brain-even```
 [![asciicast](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o.svg)](https://asciinema.org/a/QpRMToYrJaO9y7IfQIwkJDw6o)
 
-Calc game
+Calc game ```brain-calc```
 [![asciicast](https://asciinema.org/a/261760.svg)](https://asciinema.org/a/261760)
 
-Gcd game
+Gcd game ```brain-gcd```
 [![asciicast](https://asciinema.org/a/261765.svg)](https://asciinema.org/a/261765)
+
+Progression game ```brain-progression```
+[![asciicast](https://asciinema.org/a/261797.svg)](https://asciinema.org/a/261797)
