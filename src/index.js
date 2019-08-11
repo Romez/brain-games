@@ -1,17 +1,17 @@
 import readlineSync from 'readline-sync';
-import chalk from 'chalk';
+import { green } from 'chalk';
 import * as even from './games/even';
 import * as calc from './games/calc';
 import * as gcd from './games/gcd';
 import * as progression from './games/progression';
-
-const { green } = chalk;
+import * as prime from './games/prime';
 
 const games = {
   even,
   calc,
   gcd,
   progression,
+  prime,
 };
 
 const maxTries = 3;

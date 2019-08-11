@@ -1,7 +1,4 @@
-import { random } from 'lodash';
-import chalk from 'chalk';
-
-const { bold } = chalk;
+import random from 'lodash/random';
 
 const maxStartNum = 10;
 const minDifference = 2;
@@ -16,7 +13,7 @@ const makeProgression = (item, next, acc = []) => {
   return makeProgression(next(item), next, acc.concat(item));
 };
 
-export const title = `What number is missing ${bold('in')} the progression?`;
+export const title = 'What number is missing in the progression?';
 
 export const play = () => {
   const startNum = random(maxStartNum);
