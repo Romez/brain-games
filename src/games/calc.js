@@ -6,8 +6,6 @@ import {
   add,
 } from 'lodash';
 
-export const title = 'What is the result of the expression?';
-
 const operations = [
   cons('+', add),
   cons('*', multiply),
@@ -20,6 +18,8 @@ const getOperationAction = cdr;
 const getRandomOperation = () => operations[random(operations.length - 1)];
 
 const maxRandomNumber = 40;
+
+export const title = 'What is the result of the expression?';
 
 export const play = () => {
   const firstNum = random(maxRandomNumber);
