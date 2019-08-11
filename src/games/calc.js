@@ -1,5 +1,10 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import { multiply, subtract, random, add } from 'lodash';
+import {
+  multiply,
+  subtract,
+  random,
+  add,
+} from 'lodash';
 
 export const title = 'What is the result of the expression?';
 
