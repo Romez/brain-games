@@ -6,5 +6,8 @@ rules:
 
 parser: "babel-eslint"
 
+plugins:
+  - import
+
 extends:
   - 'airbnb-base'

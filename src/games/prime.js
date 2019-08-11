@@ -1,24 +1,26 @@
 import random from 'lodash/random';
+import inc from '../utils/inc';
 
 const square = num => num * num;
 
-const isDevides = (a, b) => b % a === 0;
+const isDevider = (testDevider, num) => num % testDevider === 0;
 
-const findDevisor = (num, testDevisor) => {
-  if (square(testDevisor) > num) {
+const findDevider = (num, testDevider) => {
+  if (square(testDevider) > num) {
     return num;
   }
 
-  if (isDevides(testDevisor, num)) {
-    return testDevisor;
+  if (isDevider(testDevider, num)) {
+    return testDevider;
   }
 
-  return findDevisor(num, testDevisor + 1);
+  return findDevider(num, inc(testDevider));
 };
 
-const getSmallestDevisor = num => findDevisor(num, 2);
+const firstTestDevider = 2;
+const getSmallestDevider = num => findDevider(num, firstTestDevider);
 
-const isPrime = num => num === getSmallestDevisor(num);
+const isPrime = num => num === getSmallestDevider(num);
 
 const maxQuestionNum = 100;
 

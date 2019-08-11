@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import { green } from 'chalk';
+import inc from './utils/inc';
 import * as even from './games/even';
 import * as calc from './games/calc';
 import * as gcd from './games/gcd';
@@ -44,7 +45,7 @@ const startGame = (gameName) => {
 
     console.log(green('Correct!'));
 
-    return runGame(tries + 1);
+    return runGame(inc(tries));
   };
 
   const gameResult = runGame();

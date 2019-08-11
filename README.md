@@ -16,7 +16,7 @@ Calc game ```$ brain-calc```
 [![asciicast](https://asciinema.org/a/261760.svg)](https://asciinema.org/a/261760)
 
 Gcd game ```$ brain-gcd```
-[![asciicast](https://asciinema.org/a/261765.svg)](https://asciinema.org/a/261765)
+[![asciicast](https://asciinema.org/a/261820.svg)](https://asciinema.org/a/261820)
 
 Progression game ```$ brain-progression```
 [![asciicast](https://asciinema.org/a/261797.svg)](https://asciinema.org/a/261797)

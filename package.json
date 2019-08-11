@@ -29,7 +29,8 @@
   "author": "Roman Ushakov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Romez/backend-project-lvl1/issues"
+    "url": "https://github.com/Romez/backend-project-lvl1/issues",
+    "email": "roman.ushakov.899@gmail.com"
   },
   "homepage": "https://github.com/Romez/backend-project-lvl1#readme",
   "dependencies": {
