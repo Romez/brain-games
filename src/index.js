@@ -1,16 +1,20 @@
 import readlineSync from 'readline-sync';
 import chalk from 'chalk';
-import { play as evenPlay, title as evenTitle } from './games/even';
-import { play as calcPlay, title as calcTitle } from './games/calc';
-import { play as gcdPlay, title as gcdTitle } from './games/gcd';
+import * as even from './games/even';
+import * as calc from './games/calc';
+import * as gcd from './games/gcd';
+import * as progression from './games/progression';
 
 const { green } = chalk;
 
 const games = {
-  even: { title: evenTitle, play: evenPlay },
-  calc: { title: calcTitle, play: calcPlay },
-  gcd: { title: gcdTitle, play: gcdPlay },
+  even,
+  calc,
+  gcd,
+  progression,
 };
+
+const maxTries = 3;
 
 export const greetUser = userName => `Hello, ${userName}`;
 
@@ -23,8 +27,6 @@ const startGame = (gameName) => {
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(greetUser(userName));
-
-  const maxTries = 3;
 
   const runGame = (tries = 0) => {
     if (tries >= maxTries) {
