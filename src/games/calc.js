@@ -1,19 +1,14 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import {
-  multiply,
-  subtract,
-  random,
-  add,
-} from 'lodash';
+import random from 'lodash/random';
 
 const operations = [
-  cons('+', add),
-  cons('*', multiply),
-  cons('-', subtract),
+  cons('+', (x, y) => x + y),
+  cons('*', (x, y) => x * y),
+  cons('-', (x, y) => x - y),
 ];
 
-const getOperationName = car;
-const getOperationAction = cdr;
+const getOperationName = operation => car(operation);
+const getOperationAction = operation => cdr(operation);
 
 const getRandomOperation = () => operations[random(operations.length - 1)];
 
