@@ -1,23 +1,23 @@
 import random from 'lodash/random';
+import gameEngine from '..';
 
 const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
 const maxRandomNumber = 100;
 
-export const title = 'Find the greatest common divisor of given numbers.';
+const title = 'Find the greatest common divisor of given numbers.';
 
-export const play = () => {
+const play = () => {
   const firstNum = random(maxRandomNumber);
   const secondNum = random(maxRandomNumber);
 
   const question = `${firstNum} ${secondNum}`;
-  const rightAnswer = gcd(firstNum, secondNum);
-
-  const check = userAnswer => String(rightAnswer) === userAnswer;
+  const rightAnswer = String(gcd(firstNum, secondNum));
 
   return {
     question,
     rightAnswer,
-    check,
   };
 };
+
+export default () => gameEngine(title, play);

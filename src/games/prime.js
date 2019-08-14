@@ -1,4 +1,5 @@
 import random from 'lodash/random';
+import gameEngine from '..';
 import inc from '../utils/inc';
 
 const square = num => num * num;
@@ -24,16 +25,16 @@ const isPrime = num => num === getSmallestDevider(num);
 
 const maxQuestionNum = 100;
 
-export const title = 'Answer "yes" if given number is prime. Otherwise answer "no"}.';
+const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const play = () => {
+const play = () => {
   const question = random(maxQuestionNum);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
-  const check = userAnswer => userAnswer === rightAnswer;
 
   return {
     question,
     rightAnswer,
-    check,
   };
 };
+
+export default () => gameEngine(title, play);

@@ -31,6 +31,4 @@ const play = () => {
   };
 };
 
-export default () => {
-  gameEngine(title, play);
-};
+export default () => gameEngine(title, play);
