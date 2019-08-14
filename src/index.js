@@ -1,27 +1,12 @@
 import readlineSync from 'readline-sync';
 import { green } from 'chalk';
 import inc from './utils/inc';
-import * as even from './games/even';
-import * as calc from './games/calc';
-import * as gcd from './games/gcd';
-import * as progression from './games/progression';
-import * as prime from './games/prime';
-
-const games = {
-  even,
-  calc,
-  gcd,
-  progression,
-  prime,
-};
 
 const maxTries = 3;
 
 export const greetUser = userName => `Hello, ${userName}`;
 
-const startGame = (gameName) => {
-  const { play, title } = games[gameName];
-
+const startGame = (title, play) => {
   console.log('Welcome to the Brain Games!');
 
   console.log(title);
@@ -29,23 +14,23 @@ const startGame = (gameName) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(greetUser(userName));
 
-  const runGame = (tries = 0) => {
-    if (tries >= maxTries) {
+  const runGame = (triesCount = 0) => {
+    if (triesCount >= maxTries) {
       return green(`Congratulations ${userName}!`);
     }
 
-    const { question, rightAnswer, check } = play();
+    const { question, rightAnswer } = play();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (!check(userAnswer)) {
+    if (userAnswer !== rightAnswer) {
       return `'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`;
     }
 
     console.log(green('Correct!'));
 
-    return runGame(inc(tries));
+    return runGame(inc(triesCount));
   };
 
   const gameResult = runGame();

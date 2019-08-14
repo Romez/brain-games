@@ -1,5 +1,6 @@
 import { cons, car, cdr } from '@hexlet/pairs';
 import random from 'lodash/random';
+import gameEngine from '..';
 
 const operations = [
   cons('+', (x, y) => x + y),
@@ -14,20 +15,22 @@ const getRandomOperation = () => operations[random(operations.length - 1)];
 
 const maxRandomNumber = 40;
 
-export const title = 'What is the result of the expression?';
+const title = 'What is the result of the expression?';
 
-export const play = () => {
+const play = () => {
   const firstNum = random(maxRandomNumber);
   const secondNum = random(maxRandomNumber);
   const operation = getRandomOperation();
 
   const question = `${firstNum} ${getOperationName(operation)} ${secondNum}`;
-  const rightAnswer = getOperationAction(operation)(firstNum, secondNum);
-  const check = userAnswer => userAnswer === String(rightAnswer);
+  const rightAnswer = String(getOperationAction(operation)(firstNum, secondNum));
 
   return {
     question,
     rightAnswer,
-    check,
   };
+};
+
+export default () => {
+  gameEngine(title, play);
 };
