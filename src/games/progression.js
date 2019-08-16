@@ -26,10 +26,7 @@ const play = () => {
   const rightAnswer = String(progression[randomIdx]);
   const question = progression.map((item, idx) => (idx === randomIdx ? '..' : item)).join(' ');
 
-  return {
-    question,
-    rightAnswer,
-  };
+  return { question, rightAnswer };
 };
 
 export default () => gameEngine(title, play);

@@ -14,10 +14,7 @@ const play = () => {
   const question = `${firstNum} ${secondNum}`;
   const rightAnswer = String(gcd(firstNum, secondNum));
 
-  return {
-    question,
-    rightAnswer,
-  };
+  return { question, rightAnswer };
 };
 
 export default () => gameEngine(title, play);

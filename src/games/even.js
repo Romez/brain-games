@@ -11,10 +11,7 @@ const play = () => {
   const question = random(maxRandomNumber);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
 
-  return {
-    question,
-    rightAnswer,
-  };
+  return { question, rightAnswer };
 };
 
 export default () => gameEngine(title, play);

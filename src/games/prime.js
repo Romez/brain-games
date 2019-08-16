@@ -31,10 +31,7 @@ const play = () => {
   const question = random(maxQuestionNum);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return {
-    question,
-    rightAnswer,
-  };
+  return { question, rightAnswer };
 };
 
 export default () => gameEngine(title, play);

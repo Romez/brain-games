@@ -25,10 +25,7 @@ const play = () => {
   const question = `${firstNum} ${getOperationName(operation)} ${secondNum}`;
   const rightAnswer = String(getOperationAction(operation)(firstNum, secondNum));
 
-  return {
-    question,
-    rightAnswer,
-  };
+  return { question, rightAnswer };
 };
 
 export default () => gameEngine(title, play);
