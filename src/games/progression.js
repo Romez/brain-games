@@ -1,30 +1,28 @@
 import random from 'lodash/random';
+import last from 'lodash/last';
 import gameEngine from '..';
 
-const maxStartNum = 10;
-const minDifference = 2;
-const maxDifference = 5;
-const maxProgressionLength = 10;
+const maxFirstNum = 10;
+const minStep = 1;
+const maxStep = 5;
+const progressionLength = 10;
 
-const makeProgression = (item, next, acc = []) => {
-  if (acc.length >= maxProgressionLength) {
-    return acc;
-  }
-
-  return makeProgression(next(item), next, acc.concat(item));
+const makeProgression = (firstNum, maxLength, step) => {
+  const iter = acc => (acc.length === maxLength ? acc : iter(acc.concat(last(acc) + step)));
+  return iter([firstNum]);
 };
 
 const title = 'What number is missing in the progression?';
 
 const play = () => {
-  const startNum = random(maxStartNum);
-  const difference = random(minDifference, maxDifference);
+  const firstNum = random(maxFirstNum);
+  const progressionStep = random(minStep, maxStep);
 
-  const progression = makeProgression(startNum, item => item + difference);
+  const progression = makeProgression(firstNum, progressionLength, progressionStep);
 
-  const randomIdx = random(maxProgressionLength - 1);
-  const rightAnswer = String(progression[randomIdx]);
-  const question = progression.map((item, idx) => (idx === randomIdx ? '..' : item)).join(' ');
+  const hiddenProgressionIndex = random(progressionLength - 1);
+  const rightAnswer = String(progression[hiddenProgressionIndex]);
+  const question = progression.map((item, idx) => (idx === hiddenProgressionIndex ? '..' : item)).join(' ');
 
   return { question, rightAnswer };
 };

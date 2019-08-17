@@ -14,7 +14,7 @@ const startGame = (title, play) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(greetUser(userName));
 
-  const runGame = (triesCount = 0) => {
+  const runGame = (triesCount) => {
     if (triesCount >= maxTries) {
       return green(`Congratulations ${userName}!`);
     }
@@ -33,7 +33,7 @@ const startGame = (title, play) => {
     return runGame(inc(triesCount));
   };
 
-  const gameResult = runGame();
+  const gameResult = runGame(0);
   console.log(gameResult);
 };
 
