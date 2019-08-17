@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/Romez/backend-project-lvl1#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.0.10",
     "chalk": "^2.4.2",
     "lodash": "^4.17.15",
     "readline-sync": "^1.4.10"

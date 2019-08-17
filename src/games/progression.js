@@ -5,10 +5,17 @@ import gameEngine from '..';
 const maxFirstNum = 10;
 const minStep = 1;
 const maxStep = 5;
-const progressionLength = 10;
+const maxProgressionLength = 10;
 
-const makeProgression = (firstNum, maxLength, step) => {
-  const iter = acc => (acc.length === maxLength ? acc : iter(acc.concat(last(acc) + step)));
+const makeProgression = (firstNum, progressionLength, step) => {
+  const iter = (acc) => {
+    if (acc.length === progressionLength) {
+      return acc;
+    }
+    const progressionItem = last(acc) + step;
+    return iter(acc.concat(progressionItem));
+  };
+
   return iter([firstNum]);
 };
 
@@ -18,9 +25,9 @@ const play = () => {
   const firstNum = random(maxFirstNum);
   const progressionStep = random(minStep, maxStep);
 
-  const progression = makeProgression(firstNum, progressionLength, progressionStep);
+  const progression = makeProgression(firstNum, maxProgressionLength, progressionStep);
 
-  const hiddenProgressionIndex = random(progressionLength - 1);
+  const hiddenProgressionIndex = random(maxProgressionLength - 1);
   const rightAnswer = String(progression[hiddenProgressionIndex]);
   const question = progression.map((item, idx) => (idx === hiddenProgressionIndex ? '..' : item)).join(' ');
 

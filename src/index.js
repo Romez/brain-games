@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 import { green } from 'chalk';
-import inc from './utils/inc';
 
 const maxTries = 3;
 
@@ -14,9 +13,10 @@ const startGame = (title, play) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(greetUser(userName));
 
-  const runGame = (triesCount) => {
-    if (triesCount >= maxTries) {
-      return green(`Congratulations ${userName}!`);
+  for (let i = 0; i <= maxTries; i += 1) {
+    if (i >= maxTries) {
+      console.log(green(`Congratulations ${userName}!`));
+      break;
     }
 
     const { question, rightAnswer } = play();
@@ -25,16 +25,12 @@ const startGame = (title, play) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== rightAnswer) {
-      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`;
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+      break;
     }
 
     console.log(green('Correct!'));
-
-    return runGame(inc(triesCount));
-  };
-
-  const gameResult = runGame(0);
-  console.log(gameResult);
+  }
 };
 
 export default startGame;

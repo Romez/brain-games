@@ -1,9 +1,9 @@
 import random from 'lodash/random';
 import gameEngine from '..';
 
-const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
-
 const maxRandomNumber = 100;
+
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
 const title = 'Find the greatest common divisor of given numbers.';
 
