@@ -1,6 +1,5 @@
 import random from 'lodash/random';
 import gameEngine from '..';
-import inc from '../utils/inc';
 
 const maxRamdomNumber = 100;
 
@@ -18,7 +17,7 @@ const isPrime = (num) => {
       return testDevider;
     }
 
-    return findDevider(x, inc(testDevider));
+    return findDevider(x, testDevider + 1);
   };
 
   const firstTestDevider = 2;

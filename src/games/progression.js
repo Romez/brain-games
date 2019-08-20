@@ -27,9 +27,9 @@ const play = () => {
 
   const progression = makeProgression(firstNum, maxProgressionLength, progressionStep);
 
-  const hiddenProgressionIndex = random(maxProgressionLength - 1);
-  const rightAnswer = String(progression[hiddenProgressionIndex]);
-  const question = progression.map((item, idx) => (idx === hiddenProgressionIndex ? '..' : item)).join(' ');
+  const hiddenElementIndex = random(maxProgressionLength - 1);
+  const rightAnswer = String(progression[hiddenElementIndex]);
+  const question = progression.map((item, idx) => (idx === hiddenElementIndex ? '..' : item)).join(' ');
 
   return { question, rightAnswer };
 };

@@ -3,15 +3,13 @@ import { green } from 'chalk';
 
 const maxTries = 3;
 
-export const greetUser = userName => `Hello, ${userName}`;
-
 const startGame = (title, play) => {
   console.log('Welcome to the Brain Games!');
 
   console.log(title);
 
   const userName = readlineSync.question('May I have your name? ');
-  console.log(greetUser(userName));
+  console.log(`Hello, ${userName}`);
 
   for (let i = 0; i < maxTries; i += 1) {
     const { question, rightAnswer } = play();
