@@ -2,7 +2,7 @@ import random from 'lodash/random';
 import gameEngine from '..';
 
 const minRandomNumber = -10;
-const maxRamdomNumber = 10;
+const maxRamdomNumber = 100;
 
 const isPrime = (num) => {
   const firstPrimeNumber = 2;
