@@ -11,21 +11,21 @@ const isPrime = (num) => {
     return false;
   }
 
-  const isDevider = (testDevider, x) => x % testDevider === 0;
+  const isDivider = (testDivider, x) => x % testDivider === 0;
 
-  const findDevider = (x, testDevider) => {
-    if (testDevider ** 2 > x) {
+  const findDivider = (x, testDivider) => {
+    if (testDivider ** 2 > x) {
       return x;
     }
 
-    if (isDevider(testDevider, x)) {
-      return testDevider;
+    if (isDivider(testDivider, x)) {
+      return testDivider;
     }
 
-    return findDevider(x, testDevider + 1);
+    return findDivider(x, testDivider + 1);
   };
 
-  return num === findDevider(num, firstPrimeNumber);
+  return num === findDivider(num, firstPrimeNumber);
 };
 
 const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
